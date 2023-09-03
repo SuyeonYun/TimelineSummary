@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "챕터 생성냥",
+  "version": "1.0",
+  "description": "Extension to create YouTube timelines",
+  "action": {
+    "default_icon": {
+      "24": "time.png"
+    }
+  },
+  "icons": {
+    "24": "time.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [ "https://www.youtube.com/*" ],
+      "js": [ "content.js" ],
+      "css" : ["content.css"],
+      "all_frames": false
+    }
+  ],
+  "permissions": [ "activeTab" ],
+  "host_permissions": [
+    "http://127.0.0.1:5000/makeTL" 
+  ],
+  "content_security_policy": {
+    "connect-src": "http://127.0.0.1:5000/makeTL; 'self'; 'unsafe-inline'",
+    "style-src": "'self' 'unsafe-inline'",
+    "script-src": "'self' 'unsafe-inline'",
+    "object-src": "'self'"
+  }
+}
