@@ -1,0 +1,208 @@
+.yt_timeline_container {
+    background-color: #FFFFFF;
+    padding: 4px 8px 4px 12px;
+    border: 1px solid rgba(63, 62, 62, 0.5);
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.yt_timeline_header {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Single Day', cursive;
+    user-select: none;
+    cursor: pointer;
+}
+
+.yt_timeline_header_text {
+    font-family: 'Cute Font', cursive;
+    font-size: 26px;
+    padding-left: 60px;
+}   
+
+.yt_timeline_header_actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 7px;
+    gap: 2px;
+}
+
+.yt_timeline_header_action_btn {
+    width: 70px;
+    height: 24px;
+    padding: 10px 4px 4px 4px;   
+    border-radius: 10px;
+    align-items: center;
+}
+
+.yt_timeline_header_hover_label {
+    position: absolute;
+    top: -1px;
+    right: 50px;
+    padding: 2px 8px 1px 8px;
+    background-color: #585858;
+    color: white;
+    width: 190px;   
+    height: 30px;
+    border-radius: 5px;
+    opacity: 0.7;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;    
+    font-family: sans-serif;    
+    font-size: 10px;
+    text-align: center;
+    user-select: none;
+    margin-bottom: 10px;
+}
+
+.yt_timeline_header_action_btn:hover {
+    background-color: rgba(0, 0, 0, 0.08);
+    transition: background-color 0s cubic-bezier(0.5, 0, 0, 1) 0s;
+}
+
+.yt_timeline_header_action_btn:active {
+    background-color: rgba(244, 111, 202, 0.3);
+    transition: background-color 0.2s cubic-bezier(0.42, 0.0, 0.58, 1.0) 0s;
+}
+
+
+
+.yt_timeline_body {
+    display: none;
+    overflow-y: scroll;
+    margin: 4px 0;
+    padding-top: 8px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.yt_timeline_body_show {
+    display: block;
+}
+
+.yt_timeline_body::-webkit-scrollbar {
+    width: 10px;
+}
+.yt_timeline_body::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+}
+
+.yt_timeline_body::-webkit-scrollbar-button:vertical:start:decrement,
+.yt_timeline_body::-webkit-scrollbar-button:vertical:start:increment {
+    display: block;
+    height: 30px;
+}
+
+.yt_timeline_body::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+}
+
+.yt_timeline_body::-webkit-scrollbar-track {
+    background-color: rgba(150, 150, 150, 0.3);
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 5px white;
+}
+
+.yt_timeline_loading {
+    animation: rotation 0.5s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+}
+
+.yt_timeline_text {
+    padding: 12px;
+    font-size: 16px;
+    line-height: 1.4em;
+    font-family: 'Noto Serif KR', serif;
+}
+
+.yt_timeline_transcript_text_segment_beforeSelect {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 0;
+    margin: 0 0 16px;
+    grid-template-columns: auto auto;
+}
+
+.yt_timeline_transcript_beforeSelect {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-style: oblique;
+    color: #6E6E6E;
+    user-select: none;
+}
+
+.yt_timeline_select {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 8px;
+}
+
+.yt_timeline_select button{
+    display: flex;
+    justify-content: flex-start;
+    border-radius: 12px;
+    border:rgba(0,0,0,0.05);
+    align-items: center;
+    padding: 5px 12px;
+    background-color: rgba(0,0,0,0.05);
+    white-space: nowrap;
+    min-width: fit-content;
+    cursor: pointer;
+    user-select: none;
+    font-size: 21.5px;
+    font-family: 'Cute Font', cursive;
+}
+
+.yt_timeline_select button:hover {
+    background-color: rgba(0,0,0, 0.1);
+    transition: background-color 0s cubic-bezier(0.05,0,0,1);
+}
+
+.yt_timeline_tight_selected {
+    background-color: #030303 !important;
+    color: white;   
+}
+
+.yt_timeline_loose_selected {
+    background-color: #030303 !important;
+    color: white;   
+}
+
+.yt_timeline_transcript_text_segment {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    gap: 0;
+    margin: 0 0 16px;
+    grid-template-columns: auto auto;
+}
+
+.yt_timeline_transcript_text_timestamp {
+    color:#065fd4;
+    text-decoration: none;
+    cursor: pointer;
+    margin-right: 16px;
+}
